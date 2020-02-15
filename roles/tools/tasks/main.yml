@@ -1,0 +1,38 @@
+---
+
+
+##- name: Install PPAs
+##  apt_repository: repo={{item.key}} update_cache=true state=present codename={{ item.value }}
+##  with_dict: "{{ PPAS }}"
+
+- name: Create list
+  set_fact:
+     my_list:
+             #- apt-fast
+       - bd
+         #- cpu-checker
+       - di
+       - direnv
+       - dtrx
+         ###- hh
+         ###- hstr
+       - htop
+       - jq
+       - mc
+       - neovim
+       - pass
+       - tilix
+         #- tmsu
+       - tmux
+       - tmuxinator
+         #- tmuxp
+       - vim
+
+- name: Install Packages
+  apt: name={{ my_list }} state=present # update_cache=yes
+ 
+
+##- include_tasks: cargo.yml
+##- include_tasks: fsutils.yml
+#- include_tasks: topgrade.yml
+#- include_tasks: cheat.yml
