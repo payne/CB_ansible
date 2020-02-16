@@ -1,0 +1,24 @@
+   24  ansible
+   26  mkdir ansible
+   27  cd ansible/
+   29  git remote add origin git@github.com:payne/CB_ansible.git
+   40  git commit -am 'NOT ansible stuff is not so good.'
+   48  mv roles/ ansible/
+   49  cd ansible/
+   61  sudo ansible-playbook local.yml 
+   63  sudo ansible-playbook local.yml 
+   65  sudo ansible-playbook local.yml 
+   67  sudo ansible-playbook local.yml 
+   69  sudo ansible-playbook local.yml 
+   71  sudo ansible-playbook local.yml 
+   83  tar cf ansible.tar ansible/
+   85  sudo ansible-playbook local.yml 
+   86  cd ansible/
+   87  sudo ansible-playbook local.yml 
+   96  rm ansible.tar 
+  100  cd ansible/
+  110  history | grep ansi
+  111  sudo ansible-playbook local.yml 
+  159  cd ansible/
+  163  history | grep ansi
+  164  history | grep ansi > commands.txt
