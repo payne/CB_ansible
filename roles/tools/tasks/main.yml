@@ -12,6 +12,7 @@
        - bd
          #- cpu-checker
        - di
+       - yadm
        - direnv
        - dtrx
          ###- hh
