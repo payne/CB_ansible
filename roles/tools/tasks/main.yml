@@ -5,6 +5,12 @@
 ##  apt_repository: repo={{item.key}} update_cache=true state=present codename={{ item.value }}
 ##  with_dict: "{{ PPAS }}"
 
+- name: nvm
+  shell: >
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
+  args:
+    creates: "{{ ansible_env.HOME }}/.nvm/nvm.sh"
+
 - name: Create list
   set_fact:
      my_list:
